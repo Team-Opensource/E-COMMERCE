@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
+import { useState, useEffect } from 'react';
+import '../Product.css';
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -23,12 +23,18 @@ function ProductList() {
   if (products.length > 0) {
     productList = products.map((product, index) => (
       
-        <li key={index}>
-          <div>
-            <img src={product.thumbnail} alt="" />
-        <h4 class="category">{product.category}</h4>
-        <h2 class="title">{product.title}</h2>
-        <span class="price">${product.price}</span>
+        <li key={index} className="productListItem">
+          {/* <div className="productLabel">
+         Best Seller
+          </div> */}
+          <aside className="productImgWrapper">
+            <img src={product.thumbnail} alt="" className="productImg" />
+            <button className="cartbtn productCardBtn"> Add to cart</button>
+          </aside>
+        <div> 
+        <h4 className="category">{product.category}</h4>
+        <h2 className="title">{product.title}</h2>
+        <span className="price">${product.price}</span>
       </div>
       </li>
           
@@ -38,7 +44,7 @@ function ProductList() {
   }
 
   return (
-    <ul  id="products" class="productList">
+    <ul  id="products" className="productList">
       {productList}
     </ul>
   );

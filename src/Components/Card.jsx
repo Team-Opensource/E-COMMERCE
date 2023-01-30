@@ -1,6 +1,8 @@
 import React from 'react'
 import { FaSort,  FaFilter } from 'react-icons/fa'
 import ProductList from './ProductList'
+import '../Product.css';
+
 
 function Card() {
  return(
@@ -31,8 +33,11 @@ function Card() {
     </select>
 
   </div>
-</div>
-<ProductList />
+         </div>
+         
+           <ProductList />
+       
+
 </div>
 </section>
 </div>
