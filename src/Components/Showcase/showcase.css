@@ -1,0 +1,34 @@
+.showcase{
+    padding:20px 0;
+
+}
+.showcase--upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.showcase_title{
+    font-size: 1.95rem;
+}
+.showcase--lower{
+    display: flex;
+    flex-direction: column;
+}
+.showcase_btn_mobile{
+    display: none;
+}
+
+/* media query */
+@media screen and (max-width:590px) {
+    .showcase_btn_desktop{
+        display: none;
+    }
+    .showcase_btn_mobile{
+        display: block;
+        margin-top: 20px;
+        max-width: 100%;
+        /* width:100vh; */
+       
+    }
+    
+}

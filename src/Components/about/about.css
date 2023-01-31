@@ -1,0 +1,97 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+.about--description {
+  text-align: left;
+  max-width: 690px;
+  width: 100%;
+}
+.aboutTitle {
+  font-size: 22px;
+  line-height: 24px;
+  margin-bottom: 9px;
+}
+.pets {
+  font-size: 22px;
+  line-height: 24px;
+  color: #656565;
+  margin-bottom: 12px;
+}
+.aboutDescription {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  /* or 27px */
+
+  color: #656565;
+}
+.aboutDescription > p {
+  margin-bottom: 25px;
+}
+.about--soldItems {
+  justify-self: flex-end;
+  text-align: right;
+}
+.aboutThrid {
+  font-size: 22px;
+  line-height: 24px;
+  margin-bottom: 27px;
+}
+
+.images_content {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+.images {
+  max-width: 117px;
+  width: 100%;
+  height: 147px;
+}
+
+.details {
+  text-align: right;
+}
+.aboutForthTitle {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.details > .b{
+ margin-bottom: 15px;
+}
+.b {
+  display: block;
+}
+@media screen and (max-width:1024px) {
+    .about--description {
+        text-align: left;
+        max-width: 550px;
+        width: 100%;
+      }
+}
+@media screen and (max-width:800px) {
+    .about{
+        flex-direction: column;
+    }
+    .about--soldItems {
+        justify-self: flex-start;
+        text-align: left;
+      }
+      .images_content {
+        
+        justify-content: flex-start;
+        
+      }
+     
+      
+      .details {
+        text-align: left;
+      }
+}
