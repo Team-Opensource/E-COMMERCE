@@ -1,20 +1,26 @@
 import './App.css';
 import './Product.css';
 import Card from './Components/Card';
-
-// require('dotenv').config()
-
+import Nav from './components/nav/Nav';
+import Line from './components/Line/Line';
+import Showcase from './components/Showcase/Showcase';
+import About from './components/about/About';
 
 function App() {
   return (
     <>
-    <Card/>
-    
-    
-    
+     <Nav/>
+     <main className='container'>
+     <Line/>
+     <Showcase/>
+     <About/>
+     <Line/>
+     <Card/>
+     </main>
     </>
-    
   );
 }
 
 export default App;
+
+
