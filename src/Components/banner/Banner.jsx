@@ -5,93 +5,32 @@ import './banner.css'
 // props drilling
 // useRef,useMemo
 function Banner() {
-  const [image, setImage] = useState('')
-  
-  
-  const fetchImage = async () =>{
-    const res = await fetch('https://dummyjson.com/products/1')
-    const data = await res.json()
-    setImage(data)
-    // console.log(data)
-  }
-  useEffect( () =>{
-    fetchImage()
-  },[])
+  const [image, setImage] = useState("");
+  const [id, setId] = useState(1);
+  // let id = 1
+  const fetchImage = async (id) => {
+    const res = await fetch(`https://dummyjson.com/products/${id}`);
+    const data = await res.json();
+    setImage(data);
+
+    console.log(data);
+  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setId(id + 1);
+      fetchImage(id);
+    },  21000);
+    return () => clearInterval(interval);
+    // fetchImage()
+  }, [id]);
 
   return (
+    <div className="banner">
+      <img src={image.thumbnail} alt="" className="banner_image" />
 
-    <div className='banner'>
-      <img src={image.thumbnail}  alt=""  className='banner_image'/>
-      <span className='banner_caption'>Photo of the Day</span>
+      <span className="banner_caption">Photo of the Day</span>
     </div>
-  )
+  );
 }
 
-export default Banner
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { useState, useEffect } from "react"
-// import './banner.css'
-// function Banner() {
-//     const [image, setImage]= useState([])
-//     const fetchImage = async () =>{
-//         const res = await fetch('https://dummyjson.com/products/1') 
-//         const data = await res.json()
-//         setImage(data)
-//         console.log(data)
-//     }
-//     useEffect(() =>{
-//         fetchImage()  
-//     }, [])
-
-//   return (
-//     <div className="banner">
-//       <img src={image.thumbnail} alt="photo of the day" className="banner_image" />
-//       <span className="banner_caption">Photo of the day</span>
-//     </div>
-//   )
-// }
-
-// export default Banner
+export default Banner;

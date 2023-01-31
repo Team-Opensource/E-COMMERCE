@@ -8,14 +8,16 @@ import About from './components/about/About';
 
 function App() {
   return (
-    <div className="App">
+    <>
      <Nav/>
+     <main className='container'>
      <Line/>
      <Showcase/>
      <About/>
      <Line/>
      <Card/>
-    </div>
+     </main>
+    </>
   );
 }
 

@@ -18,8 +18,7 @@ function ImageContent() {
 
   //    console.log(products)
   return (
-    <div className="about--soldItems">
-      <h3 className="aboutThrid">Peaople also buy</h3>
+    
       <div className="images_content">
         {images.map((product) => (
           <div key={product.id}>
@@ -27,12 +26,8 @@ function ImageContent() {
           </div>
         ))}
       </div>
-      <div className="details">
-        <h4 className="aboutForthTitle">Details</h4>
-        <span className="b">Size: 1020 x 1020 pixel</span>
-        <span className="b">Size: 1020 x 1020 pixel</span>
-      </div>
-    </div>
+      
+    
   );
 }
 
