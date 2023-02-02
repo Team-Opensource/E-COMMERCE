@@ -1,26 +1,31 @@
+import React, { useReducer } from 'react';
 import './App.css';
-import './Product.css';
-import Card from './Components/Card';
-import Nav from './components/nav/Nav';
-import Line from './components/Line/Line';
-import Showcase from './components/Showcase/Showcase';
-import About from './components/about/About';
+import Nav from './Components/nav/Nav';
+import Line from './Components/Line/Line';
+import Showcase from './Components/Showcase/Showcase';
+import About from './Components/about/About';
+import { CartContext } from './Components/Context/CartContext';
+import { cartReducer } from './Reducer/cartReducer';
+import ProductList from './Components/ProductList';
+
+const initialState = {
+  cart: []
+};
 
 function App() {
+  const [state, dispatch] = useReducer(cartReducer, initialState);
   return (
-    <>
+    <CartContext.Provider value={{ cart: state.cart, dispatch }}>
      <Nav/>
      <main className='container'>
      <Line/>
      <Showcase/>
      <About/>
      <Line/>
-     <Card/>
+     <ProductList />
      </main>
-    </>
+    </CartContext.Provider>
   );
 }
 
 export default App;
-
-

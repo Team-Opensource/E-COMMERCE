@@ -34,9 +34,9 @@ function Card() {
 
   </div>
          </div>
-         
+        
            <ProductList />
-       
+        
 
 </div>
 </section>
