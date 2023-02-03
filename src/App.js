@@ -6,7 +6,7 @@ import Showcase from './Components/Showcase/Showcase';
 import About from './Components/about/About';
 import  CartContext  from './Components/Context/CartContext';
 import { cartReducer } from './Reducer/cartReducer';
-import ProductList from './Components/ProductList';
+import Card from './Components/Card';
 import Cart from './Components/Cart';
 
 const initialState = {
@@ -43,7 +43,7 @@ function App() {
      <Showcase/>
      <About/>
      <Line/>
-     <ProductList />
+     <Card />
      </main>
     </CartContext.Provider>
   );
