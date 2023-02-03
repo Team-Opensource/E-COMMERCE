@@ -2,19 +2,15 @@ import React, { useEffect, useState, useContext } from 'react';
 import CartContext  from './Context/CartContext';
 
 const ProductList = () => {
-    const [products, setProducts] = useState([]);
-    const { dispatch } = useContext(CartContext);
-    // console.log({dispatch})
-    
+  const [products, setProducts] = useState([]);
+  const { addItem } = useContext(CartContext);
+        
     const fetchProducts = async () => {
         try {
           const response = await fetch('https://dummyjson.com/products');
           const data = await response.json();
           setProducts(
-            data.products.map((product, index) => ({
-              ...product,
-              id: `product-${index}`
-            }))
+            data.products
         )} catch (error) {
           console.log(error);
         }
@@ -30,7 +26,7 @@ const ProductList = () => {
             <li key={index} className="productListItem">
                 <aside className="productImgWrapper">
                     <img src={product.thumbnail} alt="" className="productImg" />
-                    <button className="cartbtn productCardBtn" onClick={() => dispatch({type: 'ADD_TO_CART', product:{...product, id: product.id}})}> Add to Cart</button>
+              <button className="cartbtn productCardBtn" onClick={() => addItem(product)}> Add to Cart</button>
                     
                 </aside>
                 <div>
