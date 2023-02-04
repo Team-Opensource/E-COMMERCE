@@ -8,7 +8,7 @@
   width: 44px;
   height: 44px;
 }
-.cart {
+/* .cart {
   position: relative;
 }
 .counter {
@@ -21,9 +21,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
 }
 
 .number {
     font-size: 0.7rem;
   color: var(--primary-color);
+} */
+
+.nav__right {
+  flex: 1;
+}
+
+.cart__icon {
+  position: relative;
+  width: max-content;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart__icon i {
+  cursor: pointer;
+}
+
+.item__count {
+  position: absolute;
+  bottom: 3px;
+  right: 0px;
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
