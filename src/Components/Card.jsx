@@ -17,13 +17,12 @@ function Card() {
     <span className="productHeading__emp"> premium photos </span>
   </h5>
   <button className="productBtn">
-    {/* <img src="../assets/filter.svg" /> */}
-    {/* <FaAssets/> */}
+    
     <FaFilter/>
   </button>
 
   <div className="desktop__sort">
-    {/* <img src="../assets/sort.svg" /> */}
+    
     <FaSort/>
     <span>Sort by</span>
 
