@@ -10,11 +10,12 @@ const CartItem = ({ item }) => {
     <li className='CartItem__item'>
       <img src={item.thumbnail} alt='' />
       <div>
-        {item.name} {formatCurrency(`${item.price}`, opts)}
+        {item.title} {formatCurrency(`${item.price}`, opts)}
       </div>
       <button className='CartItem__button' onClick={() => removeItem(item.id)}>
         Remove
       </button>
+      
     </li>
   );
 };

@@ -19,7 +19,7 @@ function Banner() {
     const interval = setInterval(() => {
       setId(id + 1);
       fetchImage(id);
-    },  21000);
+    },  25000);
     return () => clearInterval(interval);
     // fetchImage()
   }, [id]);

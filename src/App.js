@@ -6,17 +6,17 @@ import Showcase from './Components/Showcase/Showcase';
 import About from './Components/about/About';
 import  CartContext  from './Components/Context/CartContext';
 import { cartReducer } from './Reducer/cartReducer';
-import ProductList from './Components/ProductList';
+import Card from './Components/Card';
 import Cart from './Components/Cart';
 
 const initialState = {
   showCart:false,
-  cart: []
+  cart: [],
 };
 
 function App() {
   const [state, dispatch] = useReducer(cartReducer, initialState);
-  const addToCart = (item) => {
+  const addItem = (item) => {
     dispatch({ type: 'ADD_TO_CART', payload: item });
   };
 
@@ -25,13 +25,13 @@ function App() {
   };
 
   const removeItem = (id) => {
-    dispatch({ type: 'REMOVE_ITEM', payload: id });
+    dispatch({ type: 'REMOVE_FROM_CART', payload: id });
   };
   return (
     <CartContext.Provider value={{
       cart: state.cart,
       showCart: state.showCart,
-      addToCart,
+      addItem,
       showHideCart,
       removeItem,
       dispatch
@@ -43,7 +43,7 @@ function App() {
      <Showcase/>
      <About/>
      <Line/>
-     <ProductList />
+     <Card />
      </main>
     </CartContext.Provider>
   );

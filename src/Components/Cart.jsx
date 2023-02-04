@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import "./Cart.css";
+import close from '../Assets/close.png'
 import CartContext from "./Context/CartContext";
 import formatCurrency from "format-currency";
 import CartItem from "./CartItem";
@@ -12,13 +13,12 @@ const Cart = () => {
     <>
       {showCart && (
         <div className='cart__wrapper'>
-          <div style={{ textAlign: "right" }}>
-            <i
-              style={{ cursor: "pointer" }}
-              className='fa fa-times-circle'
+          <div style={{ textAlign: "right"}}>
+            <img src = {close}
+              style={{ cursor: "pointer", width: "3%"  }}
               aria-hidden='true'
               onClick={showHideCart}
-            ></i>
+            alt = '' />
           </div>
           <div className='cart__innerWrapper'>
             {cart.length === 0 ? (
@@ -33,7 +33,7 @@ const Cart = () => {
           </div>
           <div className='Cart__cartTotal'>
             <div>Cart Total</div>
-            <div></div>
+            
             <div style={{ marginLeft: 5 }}>
               {formatCurrency(
                 cart.reduce((amount, item) => item.price + amount, 0),
