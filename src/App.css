@@ -307,18 +307,6 @@ font-family: Archivo;
   padding: 51px 14px;
 
 }
-
-
-
-.headingWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-
-  border:2px solid red;
-}
-
 .productHeading {
   font-size: 18px;
   font-family: Archivo;
