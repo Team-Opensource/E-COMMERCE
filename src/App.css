@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,800&display=swap');
+
 /* General CSS */
 * {
   padding: 0;
@@ -305,7 +305,7 @@ font-family: Archivo;
 
 .product {
   padding: 51px 14px;
-
+  border: 2px solid green;
 }
 
 

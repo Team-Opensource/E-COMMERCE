@@ -13,13 +13,13 @@ function Banner() {
     const data = await res.json();
     setImage(data);
 
-    // console.log(data);
+    console.log(data);
   };
   useEffect(() => {
     const interval = setInterval(() => {
       setId(id + 1);
       fetchImage(id);
-    },  25000);
+    },  21000);
     return () => clearInterval(interval);
     // fetchImage()
   }, [id]);
