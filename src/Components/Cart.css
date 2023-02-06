@@ -1,0 +1,24 @@
+.cart__wrapper {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 10px;
+    z-index: 10;
+    max-width: 350px;
+  }
+  
+  .cart__innerWrapper {
+    height: max-content;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+  
+  .Cart__cartTotal {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
