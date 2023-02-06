@@ -28,7 +28,7 @@ function About() {
         </div>
       </div>
       <div className="about--soldItems">
-        <h3 className="aboutThrid">People also buy</h3>
+        <h3 className="aboutThrid">Peaople also buy</h3>
         <ImageContent />
 
         <div className="details">
