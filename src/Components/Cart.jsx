@@ -4,6 +4,8 @@ import close from '../Assets/close.png'
 import CartContext from "./Context/CartContext";
 import formatCurrency from "format-currency";
 import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
+
 
 const Cart = () => {
   const { showCart, cart, showHideCart } = useContext(CartContext);
@@ -33,12 +35,16 @@ const Cart = () => {
           </div>
           <div className='Cart__cartTotal'>
             <div>Cart Total</div>
-            
+            <Link to='/checkoutpage'>
+              <button className="chk-btn">CHECKOUT</button>
+            </Link>
             <div style={{ marginLeft: 5 }}>
               {formatCurrency(
                 cart.reduce((amount, item) => item.price + amount, 0),
                 opts
               )}
+
+              
             </div>
           </div>
         </div>

@@ -28,9 +28,25 @@
     border: none;
     cursor: pointer;
   }
-  
+  .CartItem__button:hover{
+    color:  red;
+  }
   .CartItem__button:focus,
   .CartItem__button:active {
     outline: none;
   }
-  
+  .chk-btn{
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .chk-btn:hover{
+    background-color: rgba(128, 128, 128, 0.616);
+  }
+  .Cart__cartTotal{
+    text-align: center;
+    font-size: 18px;
+  }
