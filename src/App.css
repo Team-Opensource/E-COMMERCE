@@ -315,8 +315,8 @@ font-family: Archivo;
   align-items: center;
   justify-content: space-between;
 
-
-  border:2px solid red;
+  
+  border:2px solid #E4E4E4;
 }
 
 .productHeading {
